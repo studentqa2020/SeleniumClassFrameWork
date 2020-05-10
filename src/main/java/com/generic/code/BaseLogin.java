@@ -4,6 +4,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,6 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.config.BaseConfig;
 import com.page.object.model.LoginPage;
 import com.util.Highlighter;
+import com.util.TakeAppScreenShot;
 import com.util.Wait;
 
 public class BaseLogin {
@@ -48,7 +50,7 @@ public class BaseLogin {
 		Thread.sleep(3000);
 
 		login.getSubmit().click();
-
+		TakeAppScreenShot.captureScreenShot(driver, "Login success");
 		System.out.println(driver.getTitle());
 		
 		driver.quit();//= all browser tab + Chrome driver
