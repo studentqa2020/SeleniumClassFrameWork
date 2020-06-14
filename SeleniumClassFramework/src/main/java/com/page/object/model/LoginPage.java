@@ -9,7 +9,7 @@ public class LoginPage {//Page Object Modal ==== PageFactory
 
 	public LoginPage(WebDriver driver) {
 
-		PageFactory.initElements(driver, this);// Selenium dev added==>driver null value
+		PageFactory.initElements(driver, this);// Selenium dev added==>handle driver null value
 	}
 
 	@FindBy(xpath = "// *[@class='login']")

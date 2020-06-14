@@ -26,7 +26,7 @@ public class DressSelection {
 			System.out.println("Found dress price = "+ price.getText());
 		});
 		
-		new Highlighter().getcolor(driver, pf.getallDressName().get(4), "red");
+		Highlighter.getcolor(driver, pf.getallDressName().get(4), "red");
 		pf.getallDressName().get(4).click();
 		
 		return driver;

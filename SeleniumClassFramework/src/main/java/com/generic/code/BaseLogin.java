@@ -42,11 +42,13 @@ public class BaseLogin {
 		System.out.println(driver.getTitle());
 
 		Wait.getExplicitWaitClicable(driver, login.getEmail());
-		new Highlighter().getcolor(driver, login.getEmail(), "yellow");
+		
+		Highlighter.getcolor(driver, login.getEmail(), "yellow");
 		login.getEmail().sendKeys(BaseConfig.getconfig("email"));
 		
 		
-		new Highlighter().getcolor(driver, login.getPass(),"black");
+		
+		Highlighter.getcolor(driver, login.getPass(),"black");
 		login.getPass().sendKeys(BaseConfig.getconfig("pass"));
 		Thread.sleep(3000);
 
