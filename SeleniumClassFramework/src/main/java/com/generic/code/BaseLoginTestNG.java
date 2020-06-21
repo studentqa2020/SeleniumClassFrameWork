@@ -13,11 +13,11 @@ import com.util.Highlighter;
 import com.util.TakeAppScreenShot;
 import com.util.Wait;
 
-public class BaseLogin {
+public class BaseLoginTestNG {
 
-	protected static  WebDriver driver;
+	protected  WebDriver driver;
 	
-	public static  WebDriver getLogin() throws Throwable {
+	public  WebDriver getLogin() throws Throwable {
 		
 		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
 		System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");

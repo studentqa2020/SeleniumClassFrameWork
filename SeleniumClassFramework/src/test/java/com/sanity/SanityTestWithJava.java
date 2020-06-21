@@ -7,9 +7,9 @@ import com.generic.code.CartFuction;
 import com.generic.code.DressSelection;
 import com.generic.code.Payment;
 
-public class SanityTest {
+public class SanityTestWithJava {
 	
-	static WebDriver driver;//null
+	 static WebDriver driver;//null
 	
 	public static void main(String[] args) throws Throwable {
 		
@@ -25,7 +25,7 @@ public class SanityTest {
 		obj2.getAddDressInCart(driver);// add dress in my shopping cart 3
 		
 		
-		Payment.getPayment(driver);//pay 4
+		new Payment().getPayment(driver);//pay 4
 		
 		//After all
 		

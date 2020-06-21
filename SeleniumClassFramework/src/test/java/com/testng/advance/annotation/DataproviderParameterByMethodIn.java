@@ -1,4 +1,4 @@
-package com.testng.dataprovider;
+package com.testng.advance.annotation;
 
 import java.awt.AWTException;
 import java.lang.reflect.Method;

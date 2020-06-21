@@ -10,31 +10,28 @@ import com.generic.code.CartFuction;
 import com.generic.code.DressSelection;
 import com.generic.code.Payment;
 
-public class BasicAnnotationWithAutomationFramework {
+public class TestNGMethodNameProblem {
 
 	WebDriver driver;
 
 	@BeforeTest
 	public void setup() throws Throwable {
-		driver = BaseLogin.getLogin();
+		System.out.println("This before test = login");
 	}
-	@Test
-	public void test1() {
-		DressSelection obj = new DressSelection();
-		obj.getDress(driver);
+	@Test()
+	public void dress() {
+		System.out.println("This my dress selection test");
 	}
-	@Test
-	public void test2() {
-		CartFuction obj = new CartFuction();
-		obj.getAddDressInCart(driver);
+	@Test()
+	public void cart() {
+		System.out.println("This is my Cart test");
 	}
-	@Test
-	public void test3() {
-		Payment.getPayment(driver);
+	@Test()
+	public void payment() {
+		System.out.println("This is my payment test");
 	}
-	
 	@AfterTest
 	public void teardown() {
-		driver.quit();
+		System.out.println("After Test = any thing close");
 	}
 }

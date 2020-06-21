@@ -13,8 +13,9 @@ public class CartFuction {
 	public  WebDriver getAddDressInCart(WebDriver driver){
 		
 		ProductPage pf = new ProductPage(driver);
+		Wait.getExplicitWaitClicable(driver, pf.getquantityinputbox());
 		pf.getquantityinputbox().clear();
-		new Highlighter().getcolor(driver, pf.getquantityinputbox(), "green");
+		Highlighter.getcolor(driver, pf.getquantityinputbox(), "green");
 		pf.getquantityinputbox().sendKeys("4");
 		
 		//how to handle drop down in selenium
@@ -23,31 +24,28 @@ public class CartFuction {
 			System.out.println(option.getText());
 		});
 		
-		new Highlighter().getcolor(driver, pf.getdressSizeDropDown(), "blue");
+		Highlighter.getcolor(driver, pf.getdressSizeDropDown(), "blue");
 		select.selectByIndex(1);
 		//select.selectByVisibleText("M");
 		//select.selectByValue("2");
-		new Highlighter().getcolor(driver, pf.getaddtoCartBtn(), "yellow");
+		Highlighter.getcolor(driver, pf.getaddtoCartBtn(), "yellow");
 		pf.getaddtoCartBtn().click();
 		
 		
 		Wait.getExplicitWaitClicable(driver, pf.getproceedToCheckOut());
-		new Highlighter().getcolor(driver, pf.getproceedToCheckOut(), "pink");
+		Highlighter.getcolor(driver, pf.getproceedToCheckOut(), "pink");
 		pf.getproceedToCheckOut().click();
-		
-		new Highlighter().getcolor(driver, pf.getsummaryProceedToCheckOut(), "red");
+		Highlighter.getcolor(driver, pf.getsummaryProceedToCheckOut(), "red");
 		pf.getsummaryProceedToCheckOut().click();//summary
 		
 		
 		Actions action = new Actions(driver);//Action class== helping selenium
 		action.moveToElement(pf.getaddressProceedToCheckOut()).build().perform();
-		new Highlighter().getcolor(driver, pf.getaddressProceedToCheckOut(), "red");
+		Highlighter.getcolor(driver, pf.getaddressProceedToCheckOut(), "red");
 		action.click(pf.getaddressProceedToCheckOut()).build().perform();
-		
-		new Highlighter().getcolor(driver, pf.getcheckBox(), "red");
+		Highlighter.getcolor(driver, pf.getcheckBox(), "red");
 		pf.getcheckBox().click();//check box
-		
-		new Highlighter().getcolor(driver, pf.getshippingProceedToCheckOut(), "red");
+		Highlighter.getcolor(driver, pf.getshippingProceedToCheckOut(), "red");
 		pf.getshippingProceedToCheckOut().click();//shipping
 		
 		

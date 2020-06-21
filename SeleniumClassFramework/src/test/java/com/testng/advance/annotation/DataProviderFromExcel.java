@@ -1,4 +1,4 @@
-package com.testng.dataprovider;
+package com.testng.advance.annotation;
 
 import org.testng.annotations.Factory;
 import org.testng.annotations.Test;
@@ -17,7 +17,7 @@ public class DataProviderFromExcel {
 		this.user = user;
 		this.pass = pass;
 	}
-	@Test()
+	@Test
 	public void testMethod() {
 		
 		System.out.println("Data is: " + url + ": == :" + user + ": == :" + pass);

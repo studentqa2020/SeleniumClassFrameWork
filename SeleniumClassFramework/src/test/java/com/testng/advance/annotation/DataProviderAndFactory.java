@@ -1,4 +1,4 @@
-package com.testng.dataprovider;
+package com.testng.advance.annotation;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Factory;
@@ -18,7 +18,7 @@ public class DataProviderAndFactory {
 
 	    @DataProvider
 	    public static Object[][] dataProviderMethod() {
-	        return new Object[][] { { "Sarower", "SundayStudent123$"}, {"Sobhan", "Student2019#"} };
+	        return new Object[][] { { "Sarower", "3333"}, {"Ahmmed", "9999"} };
 	    }
 	    @Test (priority = 1)
 	    public void testCase1(){

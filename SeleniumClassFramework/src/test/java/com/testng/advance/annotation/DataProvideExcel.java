@@ -1,4 +1,4 @@
-package com.testng.dataprovider;
+package com.testng.advance.annotation;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -8,6 +8,7 @@ import java.util.Objects;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Factory;
+import org.testng.annotations.Test;
 
 import com.excelFactory.ReturnExcel;
 
@@ -25,5 +26,10 @@ public class DataProvideExcel {
 		
 		return finalList.iterator();
 	}
+	@Test(dataProvider = "Excel" )
+	public void testMethod(String tc, String user,String pass) {
+		
+		System.out.println("Data is: " + tc + ": == :" + user + ": == :" + pass);
 
+	}
 }

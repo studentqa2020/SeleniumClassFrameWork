@@ -4,13 +4,11 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class ParameterTesting {
-
+	String browserValue ="Chrome";
 	@Test
-	@Parameters("browser") // browser =fire,chrom,safari
+	//@Parameters("browser") 
 	public void getbrowser(String browserValue) {
-		//browserValue=browser
-		
-		
+		this.browserValue =browserValue;
 		System.out.println(browserValue);
 
 	}

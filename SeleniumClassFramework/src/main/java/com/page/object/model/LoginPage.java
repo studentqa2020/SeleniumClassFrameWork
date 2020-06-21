@@ -5,14 +5,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {//Page Object Modal ==== PageFactory
+public class  LoginPage {//Page Object Modal ==== PageFactory
 
-	public LoginPage(WebDriver driver) {
+	
+	  public LoginPage(WebDriver driver) {
+	  
+	  PageFactory.initElements(driver, this);// Selenium dev added==>handle drivernull value 
+	  }
+	 
 
-		PageFactory.initElements(driver, this);// Selenium dev added==>handle driver null value
-	}
-
-	@FindBy(xpath = "// *[@class='login']")
+	@FindBy(xpath = "// *[@class='header_user_info']")
 	private WebElement login;
 	@FindBy(xpath = "//*[@id='email']")
 	private WebElement email;
