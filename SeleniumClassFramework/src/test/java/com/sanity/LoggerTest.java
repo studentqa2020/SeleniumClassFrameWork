@@ -14,7 +14,7 @@ public class LoggerTest extends ExtentManager{
 	
 	public static void main(String[] args) {
 		
-		
+		System.out.println("Info");	
 				
 				log.info("Info");	
 				log.debug("debug");
