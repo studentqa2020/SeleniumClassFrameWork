@@ -60,7 +60,7 @@ public class ReadWholeTable {
 	public static void main(String[] args) throws Throwable {
 
 
-		String query="Select * from employees";
+		String query="select * from departments";
 				
 		
 		ReadWholeTable.getDataTableColumn(query);

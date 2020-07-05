@@ -1,4 +1,4 @@
-package com.db.util.connect;
+package com.db.manager;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,12 +8,12 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DBData {
+public class DBDataBasicCode {
 
 	public static void main(String[] args) throws Throwable {
 
 		Class.forName("oracle.jdbc.driver.OracleDriver");
-		Connection connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/orcl", "hr", "hr");
+		Connection connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "hr", "sarower");
 		Statement stmt = connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
 		ResultSet rs = stmt.executeQuery("select salary from employees");
 
@@ -21,9 +21,9 @@ public class DBData {
 
 		try {
 			while (rs.next()) {
-				//System.out.println(rs.getString(1));
-				columnValue.add(rs.getString(1));
-
+			System.out.println(rs.getString(1));
+				//columnValue.add(rs.getString(1) );
+				//columnValue.add(rs.getString(2) );
 			}
 		} catch (SQLException e) {
 
