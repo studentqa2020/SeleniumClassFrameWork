@@ -21,17 +21,15 @@ public class DBDataBasicCode {
 
 		try {
 			while (rs.next()) {
-			System.out.println(rs.getString(1));
-				//columnValue.add(rs.getString(1) );
-				//columnValue.add(rs.getString(2) );
+			columnValue.add(rs.getString(1) );
+
 			}
 		} catch (SQLException e) {
 
 			e.printStackTrace();
 		}
 
-		// System.out.println(columnValue);
-		// step5 close the connection object
+
 
 		System.out.println(columnValue);
 	}
