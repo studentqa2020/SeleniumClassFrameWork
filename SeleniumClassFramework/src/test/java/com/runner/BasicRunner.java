@@ -11,12 +11,12 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		"rerun:target/rerun.txt",
 			"json:target/cucumber.json" }, 
 			
-			features = {"src/test/resources/Login.feature" },
+			features = {"Feature Files/Automation Practice login.feature" },
 			glue = { "com.stepdef" }, // package name
 			monochrome = true,
 			dryRun =false,
-			strict = true,
-		 tags= {"@Function"}
+			strict = true
+		// tags= {"@Function"}
 			
 	)
 
