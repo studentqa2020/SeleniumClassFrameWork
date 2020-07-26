@@ -57,8 +57,6 @@ public class BaseLogin {
 		
 	}
 	
-	public static void main(String[] args) throws Throwable {
-		getLogin();
-	}
+
 
 }

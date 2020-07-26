@@ -1,5 +1,7 @@
 package com.page.object.model;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -22,25 +24,31 @@ public class  LoginPage {//Page Object Modal ==== PageFactory
 	private WebElement pass;
 	@FindBy(xpath = "//*[@id='SubmitLogin']")
 	private WebElement submit;
-	@FindBy(xpath ="//*[id='log out']")
-	private WebElement logout;
 	@FindBy(xpath="//*[class='search']")
 	private WebElement search;
 	
-	//*[@class='right-block']//*[@class='price product-price']== price
-	
-	//*[@class='right-block']//*[@class='product-name']==> product name
-	
-	 public WebElement getsearch(){
+	@FindBy(xpath="//*[@class='logout']")
+	private List<WebElement> logOut;
+
+
+
+	public WebElement getSearch() {
+		return search;
+	}
+
+
+
+	public List<WebElement> getLogOut() {
+		return logOut;
+	}
+
+
+
+	public WebElement getsearch(){
 		
 	return 	search;
 	}
 	
-	
-	
-	public WebElement getlogout(){
-		return logout;
-	}
 
 	public WebElement getLogin() {
 		return login;
