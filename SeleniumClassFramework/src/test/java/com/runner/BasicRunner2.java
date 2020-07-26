@@ -12,8 +12,8 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 							"rerun:target/rerun.txt",
 							"json:target/cucumber.json" }, 
 			
-features = {"Feature Files/Automation Practice login.feature",
-		},
+features = {
+		"Feature Files/Dress.feature" },
 			glue = { "com.stepdef" }, // package name
 			monochrome = true,
 			dryRun =false,
@@ -22,10 +22,10 @@ features = {"Feature Files/Automation Practice login.feature",
 			
 	)
 
-	public class BasicRunner extends AbstractTestNGCucumberTests {
+	public class BasicRunner2 extends AbstractTestNGCucumberTests {
 
 	@BeforeTest//===cucumber hook
 	public void setup() {
-		//login
+		//code
 	}
 }

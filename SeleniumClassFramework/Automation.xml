@@ -2,10 +2,8 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
   <test thread-count="5" name="Test">
-    <classes>
-  <class name="com.runner.BasicRunner"></class>
-    <class name="com.runner.BasicRunner2"></class>
-      <class name="com.runner.BasicRunner3"></class>
+   <classes>
+  <class name="com.runner.AutomationRunner"></class>
   </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
