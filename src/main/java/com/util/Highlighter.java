@@ -12,7 +12,7 @@ public class Highlighter {
 
 	}
 
-	public void getcolor(WebDriver driver, WebElement element, String color) {// OOPs ==> Polymorphism ==> Compile time
+	public static void getcolor(WebDriver driver, WebElement element, String color) {// OOPs ==> Polymorphism ==> Compile time
 																				// poly
 		JavascriptExecutor js = (JavascriptExecutor) driver; // type casting polymorphism
 		js.executeScript("arguments[0].setAttribute('style', 'background: blue; border: 4px solid " + color + ";');",
